@@ -6,10 +6,11 @@ import bodyParser from 'koa-bodyparser'
 import {database} from './mongodb' // 引入mongodb
 
 database()
+
 const GraphqlRouter = require('./router')
 const app = new Koa()
 const router = new Router()
-
+console.log(app);
 app.use(bodyParser())
 app.use(KoaStatic(__dirname +
 '/public'))
